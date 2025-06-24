@@ -1,0 +1,16 @@
+python3 /BiO/hae/000033_PsychENCODE/summary-gwas-imputation/src/gwas_parsing.py \
+-gwas_file /BiO/hae/000029_GenomicSEM/cardio_MAF005/Result.GWAS.input.fuma \
+-liftover /BiO/hae/000036_liftover/hg19ToHg38.over.chain.gz \
+-snp_reference_metadata /BiO/hae/000037_Predixcan/data/data/reference_panel_1000G/variant_metadata.txt.gz METADATA \
+-output_column_map SNP variant_id \
+-output_column_map A1 effect_allele \
+-output_column_map A2 non_effect_allele \
+-output_column_map CHR chromosome \
+-output_column_map BP position \
+-output_column_map BETA effect_size \
+-output_column_map SE standard_error \
+-output_column_map P pvalue \
+--chromosome_format \
+--insert_value sample_size 356321 \
+-output_order variant_id panel_variant_id chromosome position effect_allele non_effect_allele pvalue effect_size standard_error sample_size \
+-output cardio.step1 \
